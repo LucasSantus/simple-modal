@@ -13,7 +13,7 @@ body{
     align-items: center;
     justify-content: center;
     min-height: 100vh;
-    margin: 0
+    margin: 0;
 }
 
 button {
@@ -28,4 +28,9 @@ button {
 
 button:hover {
     opacity: .7;
+}
+
+.buttons{
+    display: flex;
+    gap: 40px
 }

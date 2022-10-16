@@ -6,6 +6,20 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+        <!-- URL Project -->
+        <link rel="canonical" href="https://dark-mode-ls.netlify.app/"/>
+
+        <!-- Description Project -->
+        <meta name="author" content="Lucas Santos">
+        <meta name="description" content="Site construído para criação de um simples dark mode">
+
+        <!-- Import Favicon -->
+        <link rel="icon" type="image/x-icon" href="assets/images/favicon.png">
+
+        <!-- Title Page -->
+        <title>Simple Modal</title>
+
+        <!-- Import Font Awesome -->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" />
 
         <!-- Import CSS Custom -->
@@ -13,9 +27,28 @@
 
         <!-- Import CSS Modal -->
         <link rel="stylesheet" href="assets/css/modal.css">
-        
 
-        <title>Simple Modal</title>
+        <!-- if javascript is disabled, this content will appear -->
+        <noscript>
+            <style type="text/css">
+                body .main {
+                    display: none;
+                }
+                .javascript__disabled{
+                    display: flex;
+                    width: 100vw;
+                    height: 100vh;
+                    justify-content: center;
+                    align-items: center;
+                    font-size: 22px;
+                    background-color: #0D1117;
+                    color: #8f8f8f;
+                }
+            </style>
+            <div class="javascript__disabled">
+                JavaScript desativado, por favor, ative-o para o sistema funcionar corretamente!
+            </div>
+        </noscript>
     </head>
     <body>
         <main>
@@ -37,14 +70,35 @@
                                 Typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
                             </p>
                             <div class="modal-buttons">
-                                <a href="#" class="modal-button" target="_blank">
+                                <a href="https://github.com/LucasSantus" class="modal-button" target="_blank">
                                     <i class="fa-brands fa-github"></i>
                                     GitHub
                                 </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
-                                <a href="#" class="modal-button" target="_blank">
+                <div>
+                    <button active-modal modal-container-id="modal__2">
+                        Modal 2
+                    </button>
+
+                    <div id="modal__2" class="modal-container" modal-container>
+                        <div class="modal">
+                            <button class="close-button" disabled-modal modal-container-id="modal__2">
+                                <i class="fa-solid fa-xmark"></i>
+                            </button>
+                            <h1 class="text-title">
+                                Where does it come from?
+                            </h1>
+                            <p class="text-description">
+                                Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source.
+                            </p>
+                            <div class="modal-buttons">
+                                <a href="https://github.com/LucasSantus" class="modal-button" target="_blank">
                                     <i class="fa-brands fa-github"></i>
-                                    Linkedin
+                                    GitHub
                                 </a>
                             </div>
                         </div>
@@ -52,7 +106,12 @@
                 </div>
             </div>
         </main>
-        
+
+        <!-- Disabled Context Menu on pages -->
+        <script type="text/javascript" defer>
+            document.addEventListener('contextmenu', event => event.preventDefault());
+        </script>
+
         <!-- Import JS -->
         <script type="text/javascript" src="assets/js/scripts.js" defer></script>
     </body>
