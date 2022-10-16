@@ -6,10 +6,16 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        <!-- Import CSS -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" />
+
+        <!-- Import CSS Custom -->
         <link rel="stylesheet" href="assets/css/styles.css">
 
-        <title>Document</title>
+        <!-- Import CSS Modal -->
+        <link rel="stylesheet" href="assets/css/modal.css">
+        
+
+        <title>Simple Modal</title>
     </head>
     <body>
         <main>
@@ -18,16 +24,29 @@
                     <button active-modal modal-container-id="modal__1">
                         Modal 1
                     </button>
-    
+
                     <div id="modal__1" class="modal-container" modal-container>
                         <div class="modal">
-                            <h1 class="text-title">Lorem Ipsum is simply dummy text of the printing</h1>
-                            <p class="text-description">
-                                typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged
-                            </p>
-                            <button disabled-modal modal-container-id="modal__1">
-                                Close
+                            <button class="close-button" disabled-modal modal-container-id="modal__1">
+                                <i class="fa-solid fa-xmark"></i>
                             </button>
+                            <h1 class="text-title">
+                                Lorem Ipsum is simply dummy text of the printing
+                            </h1>
+                            <p class="text-description">
+                                Typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
+                            </p>
+                            <div class="modal-buttons">
+                                <a href="#" class="modal-button" target="_blank">
+                                    <i class="fa-brands fa-github"></i>
+                                    GitHub
+                                </a>
+
+                                <a href="#" class="modal-button" target="_blank">
+                                    <i class="fa-brands fa-github"></i>
+                                    Linkedin
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </div>
